@@ -1,3 +1,4 @@
+#  the graphics.py file must be in the same folder as your *.py source file.
 from graphics import *
 from random import randint
 win = GraphWin("PLOT RANDOM", 400, 400)

@@ -1,12 +1,11 @@
 from graphics import *
 
-
 def main():
     win = GraphWin('FACE', 400, 400) # give title and dimensions
     win.yUp() # make right side up coordinates!
 
     head = Circle(Point(40,100), 25) # set center and radius
-    head.setFill("#ffff00")
+    head.setFill("#ff7f00")
     head.draw(win)
 
     eye1 = Circle(Point(30, 105), 5)
