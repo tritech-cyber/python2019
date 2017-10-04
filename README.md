@@ -7,7 +7,7 @@ http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html
 </h3>
 
 
-
+<pre>
 git commands
 
 git config --global --list
@@ -23,3 +23,4 @@ repo commands
 git add --all
 git commit -m "aa"
 git push
+</pre>
