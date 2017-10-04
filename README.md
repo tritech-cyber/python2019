@@ -6,9 +6,13 @@ http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html
 <a href = "http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html" target = "_blank"> Hand On Python </a>
 </h3>
 
+<pre>
+Python grapbics.py
+
+</pre>
 
 <pre>
-git commands
+Here are some git commands so you can pull python resources from this repo
 
 git config --global --list
 user.user=icebowl
