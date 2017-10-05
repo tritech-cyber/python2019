@@ -5,7 +5,7 @@ def main():
     win.yUp() # make right side up coordinates!
 
     head = Circle(Point(40,100), 25) # set center and radius
-    head.setFill("#ff7f00")
+    head.setFill("#ff7f22")
     head.draw(win)
 
     eye1 = Circle(Point(30, 105), 5)
@@ -19,6 +19,12 @@ def main():
     mouth = Oval(Point(30, 90), Point(50, 85)) # set corners of bounding box
     mouth.setFill("#ff7f00")
     mouth.draw(win)
+
+    aline = Line(Point(0, 0), Point(200, 200)) # set endpoints
+    aline.setWidth(3)
+    aline.draw(win)
+
+
 
     label = Text(Point(100, 120), 'SMILE')
     label.draw(win)

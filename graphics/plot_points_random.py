@@ -8,7 +8,7 @@ while True:
 	y = randint(0,400)
 	pt = Point(x, y)
 	pt.draw(win)
-	
+	count = count = 1	
 input("Press return to end")
 
 win.close()
