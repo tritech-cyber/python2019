@@ -1,3 +1,14 @@
+<pre>
+not as root
+git the repo
+git clone nameOfrepo.git
+git add --all
+git commit -m "added all"
+git push
+
+</pre>
+
+
 # python
 <h3>
 As of 170920 we are using the following reference:
