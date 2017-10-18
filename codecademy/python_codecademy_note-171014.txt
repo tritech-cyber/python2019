@@ -1,0 +1,935 @@
+"""
+The string "PYTHON" has six characters,
+numbered 0 to 5, as shown below:
+
++---+---+---+---+---+---+
+| P | Y | T | H | O | N |
++---+---+---+---+---+---+
+  0   1   2   3   4   5
+
+So if you wanted "Y", you could just type
+"PYTHON"[1] (always start counting from 0!)
+"""
+fifth_letter = "MONTY"[4]
+
+print fifth_letter
+
+strings
+
+len()
+lower()
+upper()
+str()
+
+
+parrot = "norwegian blue"
+
+print parrot.upper()
+
+string_1 = "Camelot"
+string_2 = "place"
+
+print "Let's not go to %s. 'Tis a silly %s." % (string_1, string_2)
+
+
+
+def clinic():
+    print "You've just entered the clinic!"
+    print "Do you take the door on the left or the right?"
+    answer = raw_input("Type left or right and hit 'Enter'.").lower()
+    if answer == "left" or answer == "l":
+        print "This is the Verbal Abuse Room, you heap of parrot droppings!"
+    elif answer == "right" or answer == "r":
+        print "Of course this is the Argument Room, I've told you that already!"
+    else:
+        print "You didn't pick left or right! Try again."
+        clinic()
+
+clinic()
+
+
+
+
+def using_control_once():
+    if True:
+        return "Success #1"
+
+def using_control_again():
+    if True:
+        return "Success #2"
+
+print using_control_once()
+print using_control_again()
+
+
+answer = "'Tis but a scratch!"
+
+def black_knight():
+    if answer == "'Tis but a scratch!":
+        return True
+    else:             
+        return        # Make sure this returns False
+
+def french_soldier():
+    if answer == "Go away, or I shall taunt you a second time!":
+        return True
+    else:             
+        return        # Make sure this returns False
+        
+        
+answer = "'Tis but a scratch!"
+
+def black_knight():
+    if answer == "'Tis but a scratch!":
+        return True
+    else:             
+        return False        # Make sure this returns False
+
+def french_soldier():
+    if answer == "Go away, or I shall taunt you a second time!":
+        return True
+    else:             
+        return False        # Make sure this returns False
+        
+        
+def greater_less_equal_5(answer):
+    if (answer > 5):
+        return 1
+    elif (answer < 5):          
+        return -1
+    else:
+        return 0
+        
+print greater_less_equal_5(4)
+print greater_less_equal_5(5)
+print greater_less_equal_5(6)
+
+
+
+
+# Make sure that the_flying_circus() returns True
+def the_flying_circus():
+    if 5>4 and 4 > 3:    # Start coding here!
+        # Don't forget to indent
+        # the code inside this block!
+        return True
+    elif 3==3:
+        # Keep going here.
+        return False
+        # You'll want to add the else statement, too
+        
+    else:
+      return False
+      
+
+#def cude
+def cube(number):
+  return number**3
+
+def by_three(number):
+  if number % 3 == 0:
+    return cube(number)
+  else:
+    return False
+    
+ suitcase = [] 
+suitcase.append("sunglasses")
+
+# Your code here!
+suitcase.append("shirt")
+
+# dcitionaries
+menu = {} # Empty dictionary
+menu['Chicken Alfredo'] = 14.50 # Adding new key-value pair
+print menu['Chicken Alfredo']
+
+# Your code here: Add some dish-price pairs to menu!
+menu['Hot Dogs'] = 2
+menu['Ice Cream'] = 3
+menu['Soda'] = 1
+
+
+
+print "There are " + str(len(menu)) + " items on the menu."
+print menu
+
+suitcase.append("socks")
+suitcase.append("pants")
+
+list_length = len(suitcase) # Set this to the length of suitcase
+
+print "There are %d items in the suitcase." % (list_length)
+print suitcase
+
+
+start_list = [5, 3, 1, 2, 4]
+square_list = []
+
+# Your code here!
+
+
+
+for x in start_list:
+  square_list.append(x**2) 
+  print square_list 
+  square_list.sort()
+ 
+print square_list 
+
+
+#list
+
+## for loop
+# Write your function below!
+def fizz_count(x):
+  count = 0
+  for i in x:
+    if i == "fizz":
+      count = count + 1
+  return count
+  
+  
+  for letter in "Codecademy":
+  print letter
+    
+# Empty lines to make the output pretty
+print
+print
+
+word = "Programming is fun!"
+
+for letter in word:
+  # Only print out the letter i
+  if letter == "i":
+    print letter
+    
+    
+# dictionaries
+
+prices = {}
+prices = {
+  "banana":4,
+  "apple":2,
+  "orange":1.5,
+  "pear":3
+}
+
+stock = {}
+stock = {
+  "banana":6,
+  "apple":0,
+  "orange":32,
+  "pear":15
+}
+
+
+#code
+prices = {"banana": 4,
+          "apple": 2,
+          "orange": 1.5,
+          "pear": 3}
+
+stock = {"banana": 6, 
+         "apple": 0, 
+         "orange": 32, 
+         "pear": 15}
+
+
+#code
+for i in prices:
+  print i
+  print "price: %s" % prices[i]
+  print "stock: %s" % stock[i]
+  
+  
+  prices = {
+  "banana" : 4,
+  "apple"  : 2,
+  "orange" : 1.5,
+  "pear"   : 3,
+}
+stock = {
+  "banana" : 6,
+  "apple"  : 0,
+  "orange" : 32,
+  "pear"   : 15,
+}
+
+total = 0
+for key in prices:
+  print key
+  print "price: %s" % prices[key]
+  print "stock: %s" % stock[key]
+
+  total = total + (prices[key] * stock[key])
+
+print total
+
+
+#code
+shopping_list = ["banana", "orange", "apple"]
+
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pear": 15
+}
+    
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pear": 3
+}
+
+# Write your code below!
+def compute_bill(food):
+  total = 0
+  for n in food:
+    total = total + prices[n]
+  return total
+  
+  
+#shopping list
+
+shopping_list = ["banana", "orange", "apple"]
+
+stock = {
+  "banana": 6,
+  "apple": 0,
+  "orange": 32,
+  "pear": 15
+}
+    
+prices = {
+  "banana": 4,
+  "apple": 2,
+  "orange": 1.5,
+  "pear": 3
+}
+
+# Write your code below!
+def compute_bill(food):
+  total = 0
+  for n in food:
+    if stock[n] > 0:
+    	total = total + prices[n]
+    	stock[n] = stock[n] - 1
+  return total
+
+print compute_bill(shopping_list)
+
+STUDENT BECOMES THE TEACHER
+Lesson Number One
+
+#########################3333
+# print dictionary amoounts
+lloyd = {
+   "name": "Lloyd",
+  "homework": [90.0, 97.0, 75.0, 92.0],
+  "quizzes": [88.0, 40.0, 94.0],
+  "tests": [75.0, 90.0]
+}
+alice = {
+  "name": "Alice",
+  "homework": [100.0, 92.0, 98.0, 100.0],
+  "quizzes": [82.0, 83.0, 91.0],
+  "tests": [89.0, 97.0]
+}
+tyler = {
+  "name": "Tyler",
+  "homework": [0.0, 87.0, 75.0, 22.0],
+  "quizzes": [0.0, 75.0, 78.0],
+  "tests": [100.0, 100.0]
+}
+
+students = [lloyd, alice, tyler]
+for i in students:
+  print i["name"]
+  print i["homework"]
+  print i["quizzes"]
+  print i["tests"]
+  
+  ##############
+  lloyd = {
+  "name": "Lloyd",
+  "homework": [90.0, 97.0, 75.0, 92.0],
+  "quizzes": [88.0, 40.0, 94.0],
+  "tests": [75.0, 90.0]
+}
+alice = {
+  "name": "Alice",
+  "homework": [100.0, 92.0, 98.0, 100.0],
+  "quizzes": [82.0, 83.0, 91.0],
+  "tests": [89.0, 97.0]
+}
+tyler = {
+  "name": "Tyler",
+  "homework": [0.0, 87.0, 75.0, 22.0],
+  "quizzes": [0.0, 75.0, 78.0],
+  "tests": [100.0, 100.0]
+}
+
+# Add your function below!
+def average(numbers):
+  total = float(sum(numbers))
+  return total / len(numbers)
+  
+####################
+n = [3, 5, 7]
+
+def total(numbers):
+  results = 0
+  for i in range(len(numbers)):
+    results = results + numbers[i]
+  return results
+
+print total(n)
+
+###########################
+
+
+n = ["Michael", "Lieberman"]
+# Add your function here
+
+def join_strings(words):
+  result = ""
+  for i in range(len(words)):
+    result = result + str(words[i])
+  return result
+
+print join_strings(n)
+
+####################################
+ADD TWO LIST
+m = [1, 2, 3]
+n = [4, 5, 6]
+
+# Add your code here!
+def join_lists(x,y):
+ return x + y
+
+
+
+print join_lists(m, n)
+# You want this to print [1, 2, 3, 4, 5, 6]
+
+################################
+n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+# Add your function here
+def flatten(lists):
+  results=[]
+  for numbers in range(len(lists)):
+		results.append(lists[numbers])
+  return results
+
+print flatten(n)
+################################
+
+n = [[1, 2, 3], [4, 5, 6, 7, 8, 9]]
+# Add your function here
+
+def flatten(lists):
+  results = []
+  for numbers in lists:
+    for number in numbers:
+      results.append(number)
+  return results
+
+print flatten(n)
+
+####
+loops
+
+count = 0
+
+if count <= 9:
+  print "Hello, I am an if statement and count is", count
+
+while count <= 9:
+  print "Hello, I am a while and count is", count
+  count += 1
+  
+####
+
+loop_condition = True
+
+while loop_condition:
+  print "I am a loop"
+  loop_condition = False
+
+#######
+
+num = 1
+
+while num <=10:  # Fill in the condition
+  # Print num squared
+  # Increment num (make sure to do this!)
+	print num**2
+	num +=   1
+	
+#######
+
+
+choice = raw_input('Enjoying the course? (y/n)')
+
+while choice != 'y' and choice != 'n':  # Fill in the condition (before the colon)
+  choice = raw_input("Sorry, I didn't catch that. Enter again: ")
+  
+#######
+count = 0
+
+while count < 10: # Add a colon
+  print count
+  count += 1
+  # Increment count
+
+#######
+import random
+
+print "Lucky Numbers! 3 numbers will be generated."
+print "If one of them is a '5', you lose!"
+
+count = 0
+while count < 3:
+  num = random.randint(1, 6)
+  print num
+  if num == 5:
+    print "Sorry, you lose!"
+    break
+  count += 1
+else:
+  print "You win!"
+#######
+
+import random
+
+print "Lucky Numbers! 3 numbers will be generated."
+print "If one of them is a '5', you lose!"
+
+count = 0
+while count < 3:
+  num = random.randint(1, 6)
+  print num
+  if num == 5:
+    print "Sorry, you lose!"
+    break
+  count += 1
+else:
+  print "You win!"
+  
+#######
+
+from random import randint
+
+# Generates a number from 1 through 10 inclusive
+random_number = randint(1, 10)
+
+guesses_left = 3
+# Start your game!
+while guesses_left > 0:
+  guess = int(raw_input("Your guess: "))
+  if guess == random_number:
+    print "You win!"
+    break
+  guesses_left -= 1
+else:
+  print "You lose."
+  
+  #######
+  
+  hobbies = []
+
+# Add your code below!
+for i in range(3):
+   hobby = raw_input("What are your hobbies? ")
+   hobbies.append(hobby)
+   
+print hobbies
+
+#######
+
+thing = "spam!"
+
+for c in thing:
+  print c
+
+word = "eggs!"
+
+for l in word:
+  print l
+# Your code here!
+########
+
+phrase = "A bird in the hand..."
+
+# Add your for loop
+for char in phrase:
+  if char == "A" or char == 'a':
+    print 'X',
+  else:
+    print char,
+
+#Don't delete this print statement!
+print
+
+#######
+d = {'a': 'apple', 'b': 'berry', 'c': 'cherry'}
+
+for key in d:
+  # Your code here!
+  print key, d[key]
+
+#######
+
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print 'Your choices are:'
+for index, item in enumerate(choices):
+  print index+1, item
+  
+#######
+
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+  # Add your code here!
+    print max(a, b)
+    
+#####
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+print 'You have...'
+for f in fruits:
+  if f == 'tomato':
+    print 'A tomato is not a fruit!' # (It actually is.)
+    #break
+  print 'A', f
+else:
+  print 'A fine selection of fruits!'
+######
+# proactice
+def is_even(x):
+  if x % 2 == 0:
+    return True
+  else:
+    return False
+    
+######
+def is_int(x):
+  absolute = abs(x)
+  rounded = round(absolute)
+  return absolute - rounded == 0
+######
+def digit_sum(x):
+    sum  = 0
+    while x > 0:
+        sum  = sum + x % 10
+        x = x // 10
+        print (x)
+    return sum
+
+v = digit_sum(111)
+print (v)
+
+
+#######
+def factorial( n ):
+   if n <1:   
+       #print "%2d! = %d" % (n, n)
+       return 1
+   else:
+       temp = factorial( n - 1 )
+       #print "%2d! = %d" % (n, n*temp)
+       return n * temp  
+       
+print (factorial(3))
+
+def f(x):
+    n = 1
+    while x>0:
+        n = n * x
+        x = x - 1
+    return n
+
+
+def factorial( n ):
+   if n <1:   
+       #print "%2d! = %d" % (n, n)
+       return 1
+   else:
+       temp = factorial( n - 1 )
+       #print "%2d! = %d" % (n, n*temp)
+       return n * temp  
+       
+print (factorial(3))
+print (f(3))
+
+#######
+def is_prime(x):
+    if x < 2:
+        return False
+    else:
+        for n in range(2, x-1):
+            if x % n == 0:
+                return False
+        return True
+ #######
+ 
+def reverse(text):
+  l = len(text)
+  newword = ""
+  for i in l:
+    newword = text(l-i)
+  return newword
+  #######
+ def reverse(text):
+    word = ""
+    l = len(text) - 1
+    while l >= 0:
+        word = word + text[l]
+        l -= 1
+    return word
+#######
+def anti_vowel(text):
+    temp=""
+    for c in text:
+        for i in "ieaouIEAOU":
+            if c==i:
+                c=""
+            else:
+                c=c
+        temp=temp+c
+    return temp
+#######
+score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1, 
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
+         "x": 8, "z": 10}
+         
+def scrabble_score(word):
+ sum = 0
+ word = lower(word)
+ for i in range(len(word)):
+ 	sum = sum + score(word[i])
+ return sum
+
+#######!
+
+def count(sequence,item):
+  sum = 0
+  for i in range(len(item)):
+  	if item[i] == sequence:
+      sum +=1
+  return sum
+  
+  
+  
+inlist = [1,4,5,7,8,11,13,15,9,7,8,9]
+  
+print count(7,inlist)
+ for ca
+ def count(sequence, item):
+    count = 0
+    for i in sequence:
+        if i == item:
+            count += 1
+    return count    
+#######
+
+def purify(lnum):
+  for i in range(len(lnum)):
+    if lnum[i] % 2 == 0:
+      del lnum[i]
+  return lnum
+  
+  
+  from ca
+  
+  def purify(lst):
+    res = []
+    for ele in lst:
+        if ele % 2 == 0:
+            res.append(ele)
+    return res
+    
+ ###############
+ def product(ilist):
+  p = 0
+  for i in range(ilist):
+    p = p * ilist[i]
+  return p
+  
+  def product(ilist):
+  p = 1
+  for i in ilist:
+    p = p * i
+  return p
+  
+  #######
+def remove_duplicates(ilist):
+  inew = []
+  for i in ilist:
+    temp = ilist[i]
+    for j+1 in ilist:
+      if ilist[j] == temp:
+        break
+      else:
+        inew.append(temp) 
+    return inew
+    
+    def remove_duplicates(inputlist):
+    if inputlist == []:
+        return []
+    
+# Sort the input list from low to high    
+    inputlist = sorted(inputlist)
+# Initialize the output list, and give it the first value of the now-sorted input list
+    outputlist = [inputlist[0]]
+
+# Go through the values of the sorted list and append to the output list
+# ...any values that are greater than the last value of the output list
+    for i in inputlist:
+        if i > outputlist[-1]:
+            outputlist.append(i)
+        
+    return outputlist
+    
+ ###########
+def median(list):
+  if list = []:
+    return 0
+  list.sort()
+  length = len(list)
+  mid = length // 2
+  return mid
+    
+ def median(lst):
+    sorted_list = sorted(lst)
+    if len(sorted_list) % 2 != 0:
+        #odd number of elements
+        index = len(sorted_list)//2 
+        return sorted_list[index]
+    elif len(sorted_list) % 2 == 0:
+        #even no. of elements
+        index_1 = len(sorted_list)/2 - 1
+        index_2 = len(sorted_list)/2
+        mean = (sorted_list[index_1] + sorted_list[index_2])/2.0
+        return mean
+   
+print median([2, 4, 5, 9])
+    
+#####
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def grades_sum(scores):
+  sum  = 0
+  for i in scores: 
+    sum = sum +  i
+  return sum
+
+print grades_sum(grades)
+
+######
+# grades    
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def grades_sum(scores):
+  sum  = 0
+  for i in scores: 
+    sum = sum +  i
+  return sum
+
+def grades_average(scores):
+	length = len(scores)
+  return grades_sum(grades)/length
+  
+print grades_sum(grades)
+
+  grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def grades_sum(scores):
+  total = 0
+  for score in scores: 
+    total += score
+  return total
+
+print grades_sum(grades)
+
+def grades_average(grades_input):
+  sum_of_grades = grades_sum(grades_input)
+  average = sum_of_grades / float(len(grades_input))
+  return average
+
+print grades_average(grades)
+
+#standard deviation
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def print_grades(grades_input):
+  for grade in grades_input:
+    print grade
+
+def grades_sum(scores):
+  total = 0
+  for score in scores: 
+    total += score
+  return total
+    
+def grades_average(grades_input):
+  sum_of_grades = grades_sum(grades_input)
+  average = sum_of_grades / float(len(grades_input))
+  return average
+
+def grades_variance(grades):
+    variance = 0
+    for number in grades:
+        variance += (grades_average(grades) - number) ** 2
+    return variance / len(grades)
+
+def grades_std_deviation(variance):
+  return variance ** 0.5
+
+variance = grades_variance(grades)
+
+print grades_std_deviation(variance)
+#######
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def print_grades(grades_input):
+  for grade in grades_input:
+    print grade
+
+def grades_sum(scores):
+  total = 0
+  for score in scores: 
+    total += score
+  return total
+    
+def grades_average(grades_input):
+  sum_of_grades = grades_sum(grades_input)
+  average = sum_of_grades / float(len(grades_input))
+  return average
+
+def grades_variance(grades):
+    variance = 0
+    for number in grades:
+        variance += (grades_average(grades) - number) ** 2
+    return variance / len(grades)
+
+def grades_std_deviation(variance):
+  return variance ** 0.5
+
+variance = grades_variance(grades)
+
+for grade in grades:
+  print grade
+print grades_sum(grades)
+print grades_average(grades)
+print grades_variance(grades)
+print grades_std_deviation(variance)
+
