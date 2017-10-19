@@ -1,5 +1,6 @@
 def censor(text, word):
     words = text.split()
+    print(words)
     result = ''
     stars = '*' * len(word)
     count = 0
@@ -10,3 +11,5 @@ def censor(text, word):
     result =' '.join(words)
 
     return result
+
+def main

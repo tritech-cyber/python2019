@@ -933,3 +933,313 @@ print grades_average(grades)
 print grades_variance(grades)
 print grades_std_deviation(variance)
 
+
+######
+my_dict = {
+  "Name": "Uomo",
+  "Age": 60,
+  "BDFL":False
+ 
+}
+
+print (my_dict.items())
+
+#######
+my_dict = {
+  "Name": "Uomo",
+  "Age": 60,
+  "BDFL":False
+ 
+}
+
+print (my_dict.keys())
+print (my_dict.values())
+#######
+
+my_dict = {
+  'name': 'UOMO',
+  'age':  60,
+  'occupation': 'code man',
+}
+
+for i in my_dict:
+  print i, my_dict[i]
+  
+#######
+
+Building Lists
+Let's say you wanted to build a list of the numbers from 0 to 50 (inclusive). We could do this pretty easily:
+
+my_list = range(51)
+But what if we wanted to generate a list according to some logic—for example, a list of all the even numbers from 0 to 50?
+
+Python's answer to this is the list comprehension. List comprehensions are a powerful way to generate lists using the for/in and if keywords we've learned.
+
+#--
+code
+evens_to_50 = [i for i in range(51) if i % 2 == 0]
+print evens_to_50
+
+######
+
+doubles_by_3 = [x * 2 for x in range(1, 6) if (x * 2) % 3 == 0]
+
+# Complete the following line. Use the line above for help.
+even_squares = [x * x for x in range(2,11) if x % 2 == 0]
+
+print even_squares
+
+#######
+cubes_by_four = [x ** 3 for x in range(1, 11) if ((x ** 3) % 4) == 0]
+print cubes_by_four
+#######
+
+List Slicing Syntax
+Sometimes we only want part of a Python list. 
+Maybe we only want the first few elements; 
+maybe we only want the last few. 
+Maybe we want every other element!
+
+List slicing allows us to access elements 
+of a list in a concise manner. The syntax looks like this:
+
+[start:end:stride]
+Where start describes where the slice starts (inclusive), 
+end is where it ends (exclusive), and stride describes the 
+space between items in the sliced list. For example, 
+a stride of 2 would select every other item from the 
+original list to place in the sliced list.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+Omitting Indices
+If you don't pass a particular index to the list slice, Python will pick a default.
+
+to_five = ['A', 'B', 'C', 'D', 'E']
+
+print to_five[3:]
+# prints ['D', 'E'] 
+
+print to_five[:2]
+# prints ['A', 'B']
+
+print to_five[::2]
+# print ['A', 'C', 'E']
+The default starting index is 0.
+The default ending index is the end of the list.
+The default stride is 1.
+
+Omitting Indices
+If you don't pass a particular index to the list slice, Python will pick a default.
+
+to_five = ['A', 'B', 'C', 'D', 'E']
+
+print to_five[3:]
+# prints ['D', 'E'] 
+
+print to_five[:2]
+# prints ['A', 'B']
+
+print to_five[::2]
+# print ['A', 'C', 'E']
+The default starting index is 0.
+The default ending index is the end of the list.
+The default stride is 1.
+
+Reversing a List
+We have seen that a positive stride progresses through the list from left to right.
+
+A negative stride progresses through the list from right to left.
+
+letters = ['A', 'B', 'C', 'D', 'E']
+print letters[::-1]
+In the example above, we print out ['E', 'D', 'C', 'B', 'A'].
+
+my_list = range(1, 11)
+
+# Add your code below!
+backwards = my_list[::-1]
+
+print backwards
+
+Stride Length
+A positive stride length traverses the list from left to right, and a negative one traverses the list from right to left.
+
+Further, a stride length of 1 traverses the list "by ones," a stride length of 2 traverses the list "by twos," and so on.
+
+to_21 = range(1, 22)
+
+odds = to_21[::2]
+
+middle_third = to_21[7:14]
+
+############################
+
+Anonymous Functions
+One of the more powerful aspects of Python is that it allows for a style of programming 
+called functional programming, which means that you're allowed to pass functions around 
+just as if they were variables or values. Sometimes we take this for granted, but not
+ all languages allow this!
+
+Check out the code at the right. See the lambda bit? Typing
+
+lambda x: x % 3 == 0
+Is the same as
+
+def by_three(x):
+  return x % 3 == 0
+Only we don't need to actually give the function a name; it does its work and returns a value without one. That's why the function the lambda creates is an anonymous function.
+
+When we pass the lambda to filter, filter uses the lambda to determine what to filter, and the second argument (my_list, which is just the numbers 0 – 15) is the list it does the filtering on.
+
+
+########################################
+Anonymous Functions
+One of the more powerful aspects of Python is that it allows for a style of programming called functional programming, which means that you're allowed to pass functions around just as if they were variables or values. Sometimes we take this for granted, but not all languages allow this!
+
+Check out the code at the right. See the lambda bit? Typing
+
+lambda x: x % 3 == 0
+Is the same as
+
+def by_three(x):
+  return x % 3 == 0
+Only we don't need to actually give the function a name; it does its work and returns a value without one. That's why the function the lambda creates is an anonymous function.
+
+When we pass the lambda to filter, filter uses the lambda to determine what to filter, and the second argument (my_list, which is just the numbers 0 – 15) is the list it does the filtering on.
+
+4. Map, Filter and Reduce
+These are three functions which facilitate a functional approach to programming. We will discuss them one by one and understand their use cases.
+
+4.1. Map
+Map applies a function to all the items in an input_list. Here is the blueprint:
+
+Blueprint
+
+map(function_to_apply, list_of_inputs)
+Most of the times we want to pass all the list elements to a function one-by-one and then collect the output. For instance:
+
+items = [1, 2, 3, 4, 5]
+squared = []
+for i in items:
+    squared.append(i**2)
+Map allows us to implement this in a much simpler and nicer way. Here you go:
+
+items = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, items))
+Most of the times we use lambdas with map so I did the same. Instead of a list of inputs we can even have a list of functions!
+
+def multiply(x):
+    return (x*x)
+def add(x):
+    return (x+x)
+
+funcs = [multiply, add]
+for i in range(5):
+    value = list(map(lambda x: x(i), funcs))
+    print(value)
+
+# Output:
+# [0, 0]
+# [1, 2]
+# [4, 4]
+# [9, 6]
+# [16, 8]
+4.2. Filter
+As the name suggests, filter creates a list of elements for which a function returns true. Here is a short and concise example:
+
+number_list = range(-5, 5)
+less_than_zero = list(filter(lambda x: x < 0, number_list))
+print(less_than_zero)
+
+# Output: [-5, -4, -3, -2, -1]
+The filter resembles a for loop but it is a builtin function and faster.
+
+Note: If map & filter do not appear beautiful to you then you can read about list/dict/tuple comprehensions.
+
+4.3. Reduce
+Reduce is a really useful function for performing some computation on a list and returning the result. It applies a rolling computation to sequential pairs of values in a list. For example, if you wanted to compute the product of a list of integers.
+
+So the normal way you might go about doing this task in python is using a basic for loop:
+
+product = 1
+list = [1, 2, 3, 4]
+for num in list:
+    product = product * num
+
+# product = 24
+Now let’s try it with reduce:
+
+from functools import reduce
+product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
+
+# Output: 24
+Next  Previous
+
+17. Lambdas
+Lambdas are one line functions. They are also known as anonymous functions in some other languages. You might want to use lambdas when you don’t want to use a function twice in a program. They are just like normal functions and even behave like them.
+
+Blueprint
+
+lambda argument: manipulate(argument)
+Example
+
+add = lambda x, y: x + y
+
+print(add(3, 5))
+# Output: 8
+Here are a few useful use cases for lambdas and just a few way in which they are used in the wild:
+
+List sorting
+
+a = [(1, 2), (4, 1), (9, 10), (13, -3)]
+a.sort(key=lambda x: x[1])
+
+print(a)
+# Output: [(13, -3), (4, 1), (1, 2), (9, 10)]
+Parallel sorting of lists
+
+data = zip(list1, list2)
+data.sort()
+list1, list2 = map(lambda t: list(t), zip(*data))
+
+~~~~
+
+
+languages = ["HTML", "JavaScript", "Python", "Ruby"]
+
+# Add arguments to the filter()
+print filter(lambda x: x == "Python", languages)
+
+#my_list = range(16)
+#print filter(lambda x: x % 3 == 0, my_list)
+
+squares = [x ** 2 for x in range(1, 11)]
+
+print filter(lambda x: x >= 30 and x <= 70, squares)
+
+#cubes = [x ** 3 for x in range(1, 11)]
+#filter(lambda x: x % 3 == 0, cubes)
+
+
+#dictionaries
+movies = {
+  "Monty Python and the Holy Grail": "Great",
+  "Monty Python's Life of Brian": "Good",
+  "Monty Python's Meaning of Life": "Okay"
+}
+
+print movies.items()
+
+
+Comprehending Comprehensions
+Good! Now let's take another look at list comprehensions.
+
+squares = [x ** 2 for x in range(5)]
+Instructions
+1.
+Use a list comprehension to create a list, threes_and_fives, that consists only of the numbers between 1 and 15 (inclusive) that are evenly divisible by 3 or 5.
+
+threes_and_fives = [x for x in range(1, 16) if x % 3 == 0 or x % 5 == 0]
+garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
+
+message = filter(lambda x: x != "X", garbled)
+print message
