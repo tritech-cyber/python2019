@@ -1,0 +1,288 @@
+class Fruit(object):
+  """A class that makes various tasty fruits."""
+  def __init__(self, name, color, flavor, poisonous):
+    self.name = name
+    self.color = color
+    self.flavor = flavor
+    self.poisonous = poisonous
+
+  def description(self):
+    print "I'm a %s %s and I taste %s." % (self.color, self.name, self.flavor)
+
+  def is_edible(self):
+    if not self.poisonous:
+      print "Yep! I'm edible."
+    else:
+      print "Don't eat me! I am super poisonous."
+
+lemon = Fruit("lemon", "yellow", "sour", False)
+
+lemon.description()
+lemon.is_edible()
+
+
+######
+class Animal(object):
+  def __init__(self,name):
+    self.name = name
+    print(name)
+#######
+class Animal(object):
+  def __init__(self,name):
+    self.name = name
+    print(name)
+    
+zebra = Animal("Jeffrey")
+print zebra
+
+#######
+class Animal(object):
+  """Makes cute animals."""
+  is_alive = True
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+  # Add your method here!
+  def description(self):
+    print self.name
+    print self.age
+    
+hippo = Animal("Anderson", 36)
+hippo.description()
+
+######
+class Animal(object):
+  """Makes cute animals."""
+  is_alive = True
+  health = "good"
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+  # Add your method here!
+  def description(self):
+    print self.name
+    print self.age
+    
+hippo = Animal('Anderson', 36)
+sloth = Animal('Dale', 15)
+ocelot = Animal('Fuzzy', 7)
+
+print hippo.health
+print sloth.health
+print ocelot.health
+######
+
+class ShoppingCart(object):
+  """Creates shopping cart objects
+  for users of our fine website."""
+  items_in_cart = {}
+  def __init__(self, customer_name):
+    self.customer_name = customer_name
+
+  def add_item(self, product, price):
+    """Add product to the cart."""
+    if not product in self.items_in_cart:
+      self.items_in_cart[product] = price
+      print product + " added."
+    else:
+      print product + " is already in the cart."
+
+  def remove_item(self, product):
+    """Remove product from the cart."""
+    if product in self.items_in_cart:
+      del self.items_in_cart[product]
+      print product + " removed."
+    else:
+      print product + " is not in the cart."
+
+my_cart = ShoppingCart("CWC")
+my_cart.add_item("uke", 10)
+
+#######
+Inheritance is a tricky concept, so let's go through it step by step.
+
+Inheritance is the process by which one class takes on the attributes and methods of another, and it's used to express an is-a relationship. For example, a Panda is a bear, so a Panda class could inherit from a Bear class. However, a Toyota is not a Tractor, so it shouldn't inherit from the Tractor class (even if they have a lot of attributes and methods in common). Instead, both Toyota and Tractor could ultimately inherit from the same Vehicle class.
+  
+####
+Inheritance Syntax
+In Python, inheritance works like this:
+
+class DerivedClass(BaseClass):
+  # code goes here
+where DerivedClass is the new class you're making and BaseClass is the class from which that new class inherits.
+#######
+class Shape(object):
+  """Makes shapes!"""
+  def __init__(self, number_of_sides):
+    self.number_of_sides = number_of_sides
+
+# Add your Triangle class below!
+class Triangle(Shape):
+  def __init__(self, side1, side2, side3):
+    self.side1 = side1
+    self.side2 = side2
+    self.side3 = side3
+    
+##########
+NTRODUCTION TO CLASSES
+Override!
+Sometimes you'll want one class that inherits from another to not only take on the methods and attributes of its parent, but to override one or more of them.
+class Employee(object):
+  """Models real-life employees!"""
+  def __init__(self, employee_name):
+    self.employee_name = employee_name
+
+  def calculate_wage(self, hours):
+    self.hours = hours
+    return hours * 20.00
+
+# Add your code below!
+class PartTimeEmployee(Employee):
+  def calculate_wage(self,hours):
+    self.hours=hours
+    return hours*12.00
+    
+########
+class Employee(object):
+  """Models real-life employees!"""
+  def __init__(self, employee_name):
+    self.employee_name = employee_name
+
+  def calculate_wage(self, hours):
+    self.hours = hours
+    return hours * 20.00
+
+# Add your code below!
+class PartTimeEmployee(Employee):
+  def calculate_wage(self, hours):
+    self.hours = hours
+    return hours * 12.00
+  
+  def full_time_wage(self, hours):
+    return super(PartTimeEmployee, self).calculate_wage(hours)
+
+milton = PartTimeEmployee('Milton')
+print milton.full_time_wage(10)
+
+
+class Employee(object):
+  def __init__(self, name):
+    self.name = name
+  def greet(self, other):
+    print "Hello, %s" % other.name
+
+class CEO(Employee):
+  def greet(self, other):
+    print "Get back to work, %s!" % other.name
+
+ceo = CEO("Emily")
+emp = Employee("Steve")
+emp.greet(ceo)
+# Hello, Emily
+ceo.greet(emp)
+# Get back to work, Steve!
+Rather than have a separate greet_underling method for our CEO, we override (or re-create) the greet method on top of the base Employee.greet method. This way, we don't need to know what type of Employee we have before we greet another Employee.
+
+my_list = [i ** 2 for i in range(1, 11)]
+my_file = open("output.txt", "w")
+# Add your code below!
+for value in my_list:
+  my_file.write(str(value) + "\n")
+  
+my_file.close()
+
+####
+my_file = open("output.txt", "r")
+print my_file.read()
+my_file.close()
+
+my_list = [i ** 2 for i in range(1, 11)]
+my_file = open("output.txt", "w")
+# Add your code below!
+for value in my_list:
+  my_file.write(str(value) + "\n")
+  
+my_file.close()
+
+###########################
+
+file2 = open("output2.txt", "w")
+# Add your code below!
+for i in range(10):
+	file2.write(str(i) + " ")
+  
+my_file.close()
+
+###########################
+
+my_file3 = open("output.txt", "r")
+print (my_file3.read())
+my_file3.close()
+
+
+my_file = open("text.txt", "r")
+print my_file.readline()
+print my_file.readline()
+print my_file.readline()
+my_file.close()
+
+
+#########################33
+
+PSA: Buffering Data
+We keep telling you that you always need to close your files after you're done writing to them. Here's why!
+
+During the I/O process, data is buffered: this means that it is held in a temporary location before being written to the file.
+
+Python doesn't flush the buffer—that is, write data to the file—until it's sure you're done writing. One way to do this is to close the file. If you write to a file without closing, the data won't make it to the target file.
+
+
+# Use a file handler to open a file for writing
+write_file = open("text.txt", "w")
+
+# Open the file for reading
+read_file = open("text.txt", "r")
+
+# Write to the file
+write_file.write("Not closing files is VERY BAD.")
+
+write_file.close()
+
+# Try to read from the file
+print read_file.read()
+
+read_file.close()
+########
+FILE INPUT/OUTPUT
+The 'with' and 'as' Keywords
+Programming is all about getting the computer to do the work. Is there a way to get Python to automatically close our files for us?
+
+Of course there is. This is Python.
+
+You may not know this, but file objects contain a special pair of built-in methods: __enter__() and __exit__(). The details aren't important, but what is important is that when a file object's __exit__() method is invoked, it automatically closes the file. How do we invoke this method? With with and as.
+
+The syntax looks like this:
+
+with open("file", "mode") as variable:
+  # Read or write to the file
+Instructions
+1.
+Check out the example in the editor. Note that we don't explicitly close() our file, and remember that if we don't close a file, our data will get stuck in the buffer. Click Run!
+
+Success! is written to a file called text.txt.
+
+#######
+with open("text.txt", "w") as textfile:
+  textfile.write("Success!")
+#####
+with open("text.txt","w") as my_file:
+	my_file.write("Success!")
+#####
+
+with open("text.txt", "w") as my_file:
+  my_file.write("My Data!")
+  
+if not file.closed:
+  file.close()
+
+print my_file.closed
