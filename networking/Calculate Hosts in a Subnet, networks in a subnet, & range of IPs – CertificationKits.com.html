@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!-- saved from url=(0173)https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-network-layer-conceptslayer-3/calculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips/ -->
+<html class="ua-windows_nt ua-windows_nt-10 ua-windows_nt-10-0 ua-chrome ua-chrome-64 ua-chrome-64-0 ua-chrome-64-0-3282 ua-chrome-64-0-3282-140 ua-desktop ua-desktop-windows ua-webkit ua-webkit-537 ua-webkit-537-36 js applicationcache geolocation history postmessage websockets localstorage sessionstorage websqldatabase webworkers hashchange audio canvas canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil touchevents fontface generatedcontent textshadow indexeddb indexeddb-deletedatabase cssanimations backgroundsize borderimage borderradius boxshadow flexbox cssreflections csstransforms csstransforms3d csstransitions" lang="en-US" data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36" style="overflow-y: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com</title>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="CertificationKits.com » Feed" href="https://www.certificationkits.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="CertificationKits.com » Comments Feed" href="https://www.certificationkits.com/comments/feed/">
+			<link rel="shortcut icon" href="https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/uploads/2014/10/favicon.png" type="image/x-icon">
+					<!-- For iPad Retina display -->
+			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-network-layer-conceptslayer-3/calculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips/">
+				<script async="" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/gtm.js.download"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.certificationkits.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="layerslider-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/layerslider.css" type="text/css" media="all">
+<link rel="stylesheet" id="ls-google-fonts-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/settings.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style>
+<link rel="stylesheet" id="avada-stylesheet-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/style.min.css" type="text/css" media="all">
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='avada-shortcodes-css'  href='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/shortcodes.css?ver=5.0.6' type='text/css' media='all' />
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='avada-IE8-css'  href='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/assets/css/ie8.css?ver=5.0.6' type='text/css' media='all' />
+<![endif]-->
+<!--[if IE]>
+<link rel='stylesheet' id='avada-IE-css'  href='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/assets/css/ie.css?ver=5.0.6' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="fusion-builder-shortcodes-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/fusion-shortcodes.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="avada-dynamic-css-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/avada-443.css" type="text/css" media="all">
+<link rel="stylesheet" id="avada_google_fonts-css" href="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/css(1)" type="text/css" media="all">
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/greensock.js.download"></script><style></style>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/jquery.js.download"></script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var LS_Meta = {"v":"6.1.0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/layerslider.kreaturamedia.jquery.js.download"></script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/layerslider.transitions.js.download"></script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/jquery.themepunch.tools.min.js.download"></script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/jquery.themepunch.revolution.min.js.download"></script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/gtm4wp-form-move-tracker.js.download"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/assets/js/html5shiv.js?ver=5.0.6'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/assets/js/excanvas.js?ver=5.0.6'></script>
+<![endif]-->
+<meta name="generator" content="Powered by LayerSlider 6.1.0 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress.">
+<!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
+<link rel="https://api.w.org/" href="https://www.certificationkits.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.certificationkits.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.4">
+<link rel="canonical" href="https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-network-layer-conceptslayer-3/calculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips/">
+<link rel="shortlink" href="https://www.certificationkits.com/?p=443">
+<link rel="alternate" type="application/json+oembed" href="https://www.certificationkits.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.certificationkits.com%2Fcisco-certification%2Fccna-articles%2Fcisco-ccna-network-layer-conceptslayer-3%2Fcalculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.certificationkits.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.certificationkits.com%2Fcisco-certification%2Fccna-articles%2Fcisco-ccna-network-layer-conceptslayer-3%2Fcalculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips%2F&amp;format=xml">
+
+<!-- Google Tag Manager for WordPress by DuracellTomi - http://duracelltomi.com -->
+<script data-cfasync="false" type="text/javascript">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	dataLayer.push({"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"7328pwpadmin"});
+</script>
+<script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NJRC53');</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by DuracellTomi -->		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by Slider Revolution 5.3.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+
+	
+	<script type="text/javascript">
+		var doc = document.documentElement;
+		doc.setAttribute('data-useragent', navigator.userAgent);
+	</script>
+
+	
+	<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="page-template-default page page-id-443 page-child parent-pageid-760 fusion-body no-tablet-sticky-header no-mobile-sticky-header no-totop mobile-logo-pos-left layout-wide-mode has-sidebar fusion-top-header menu-text-align-left mobile-menu-design-modern fusion-show-pagination-text do-animate">
+				<div id="wrapper" class="">
+		<div id="home" style="position:relative;top:1px;"></div>
+				
+		
+			<header class="fusion-header-wrapper" style="">
+				<div class="fusion-header-v4 fusion-logo-left fusion-sticky-menu-1 fusion-sticky-logo- fusion-mobile-logo- fusion-mobile-menu-design-modern fusion-sticky-menu-only fusion-header-menu-align-left">
+					
+<div class="fusion-secondary-header">
+	<div class="fusion-row">
+					<div class="fusion-alignleft"><div class="fusion-social-links-header"><div class="fusion-social-networks"><div class="fusion-social-networks-wrapper"><a class="fusion-social-network-icon fusion-tooltip fusion-facebook fusion-icon-facebook" style="color:#bebdbd;" href="https://www.facebook.com/CertificationKits" target="_blank" rel="noopener noreferrer" title="Facebook"><span class="screen-reader-text">Facebook</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-twitter fusion-icon-twitter" style="color:#bebdbd;" href="http://twitter.com/CiscoKits" target="_blank" rel="noopener noreferrer" title="Twitter"><span class="screen-reader-text">Twitter</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-youtube fusion-icon-youtube" style="color:#bebdbd;" href="http://www.youtube.com/CiscoKits" target="_blank" rel="noopener noreferrer" title="Youtube"><span class="screen-reader-text">Youtube</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-googleplus fusion-icon-googleplus" style="color:#bebdbd;" href="https://plus.google.com/+Certificationkits" target="_blank" rel="noopener noreferrer" title="Googleplus"><span class="screen-reader-text">Googleplus</span></a></div></div></div></div>
+							<div class="fusion-alignright"><nav class="fusion-secondary-menu"><ul id="menu-top-nav-menu" class="menu"><li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-16"><a href="https://www.certificationkits.com/"><span class="menu-text">Home</span></a></li><li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://www.certificationkits.com/about/"><span class="menu-text">About Us</span></a></li><li id="menu-item-830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-830"><a href="https://shop.certificationkits.com/contact-us/"><span class="menu-text">Contact Us</span></a></li><li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="https://www.certificationkits.com/blog/"><span class="menu-text">Blog</span></a></li><li id="menu-item-272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272"><a title="Shop" href="http://shop.certificationkits.com/"><span class="menu-text">Shop</span></a></li></ul></nav><div class="fusion-mobile-nav-holder"><ul id="menu-top-nav-menu" class="menu"><li id="mobile-menu-item-16" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/"><span class="menu-text">Home</span></a></li><li id="mobile-menu-item-17" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/about/"><span class="menu-text">About Us</span></a></li><li id="mobile-menu-item-830" class="fusion-mobile-nav-item" style=""><a href="https://shop.certificationkits.com/contact-us/"><span class="menu-text">Contact Us</span></a></li><li id="mobile-menu-item-829" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/blog/"><span class="menu-text">Blog</span></a></li><li id="mobile-menu-item-272" class="fusion-mobile-nav-item" style=""><a title="Shop" href="http://shop.certificationkits.com/"><span class="menu-text">Shop</span></a></li></ul></div></div>
+			</div>
+</div>
+<div class="fusion-header-sticky-height" style="height: 178px; display: none;"></div>
+<div class="fusion-sticky-header-wrapper" style=""> <!-- start fusion sticky header wrapper -->
+	<div class="fusion-header" style="">
+		<div class="fusion-row">
+			
+<div class="fusion-logo" data-margin-top="31px" data-margin-bottom="0px" data-margin-left="0px" data-margin-right="0px" style="">
+				<a class="fusion-logo-link" href="https://www.certificationkits.com/">
+						<img src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/logo-site.png" width="149" height="79" alt="CertificationKits.com" class="fusion-logo-1x fusion-standard-logo">
+
+							<img src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/logo-site.png" width="149" height="79" alt="CertificationKits.com" class="fusion-standard-logo fusion-logo-2x">
+			
+			<!-- mobile logo -->
+			
+			<!-- sticky header logo -->
+					</a>
+		<div class="fusion-header-content-3-wrapper"><h3 class="fusion-header-tagline" data-fontsize="16" data-lineheight="24">CertificationKits is your one-stop source for Cisco certification lab hardware &amp; training.</h3></div></div>					<div class="fusion-mobile-menu-icons">
+							<a href="https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-network-layer-conceptslayer-3/calculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips/#" class="fusion-icon fusion-icon-bars"></a>
+		
+		
+			</div>
+		</div>
+	</div>
+	<div class="fusion-secondary-main-menu" style="">
+		<div class="fusion-row">
+			<nav class="fusion-main-menu"><ul id="menu-main-nav-menu" class="fusion-menu"><li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-801 fusion-dropdown-menu"><a href="http://shop.certificationkits.com/lab-certification-kits/" aria-haspopup="true"><span class="menu-text">Lab Certification Kits</span></a><ul class="sub-menu"><li id="menu-item-796" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-796 fusion-dropdown-submenu"><a href="http://shop.certificationkits.com/ccna-lab-kits/"><span class="">CCNA Lab Kits</span></a></li><li id="menu-item-797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-797 fusion-dropdown-submenu"><a href="http://shop.certificationkits.com/ccna-security-kits/"><span class="">CCNA Security Kits</span></a></li><li id="menu-item-798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-798 fusion-dropdown-submenu"><a href="http://shop.certificationkits.com/ccna-voice-kits/"><span class="">CCNA Voice Kits</span></a></li><li id="menu-item-799" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-799 fusion-dropdown-submenu"><a href="http://shop.certificationkits.com/ccnp-lab-kits/"><span class="">CCNP Lab Kits</span></a></li><li id="menu-item-800" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-800 fusion-dropdown-submenu"><a href="http://shop.certificationkits.com/ccie-lab-kits/"><span class="">CCIE Lab Kits</span></a></li></ul></li><li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-20 fusion-dropdown-menu"><a title="Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/" aria-haspopup="true"><span class="menu-text">Lab Suggestions</span></a><ul class="sub-menu"><li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21 fusion-dropdown-submenu"><a title="Cisco CCNA Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/cisco-lab-suggestions/"><span class="">CCNA</span></a></li><li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23 fusion-dropdown-submenu"><a title="CCNA Security Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/how-to-ccna-security-lab/"><span class="">CCNA Security</span></a></li><li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273 fusion-dropdown-submenu"><a title="How to Build a CCNA Voice 640-461 Lab" href="https://www.certificationkits.com/lab-suggestions/ccna-voice-lab/"><span class="">CCNA Voice</span></a></li><li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274 fusion-dropdown-submenu"><a title="CCNP Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/ccnp-lab-suggestions/"><span class="">CCNP</span></a></li><li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275 fusion-dropdown-submenu"><a title="Cisco CCIE Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/ccie-lab-suggestions/"><span class="">CCIE</span></a></li></ul></li><li id="menu-item-834" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-834 fusion-dropdown-menu"><a href="https://www.certificationkits.com/cisco-certification/" aria-haspopup="true"><span class="menu-text">Cisco Certification</span></a><ul class="sub-menu"><li id="menu-item-305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-305 fusion-dropdown-submenu"><a href="https://www.certificationkits.com/ccna-study-center/" aria-haspopup="true"><span class="">CCNA Study Center</span></a><ul class="sub-menu"><li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="https://www.certificationkits.com/ccna/"><span class="">CCNA Overview</span></a></li><li id="menu-item-308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="https://www.certificationkits.com/getting-started-ccna-lab/"><span class="">Getting Started</span></a></li><li id="menu-item-836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-836"><a href="https://www.certificationkits.com/ccna-certification-study-topics/"><span class="">CCNA v2.0 Exam Center</span></a></li><li id="menu-item-776" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-776"><a href="https://www.certificationkits.com/cisco-certification/cisco-ccna-640-802-exam-certification-guide/"><span class="">CCNA Course</span></a></li><li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="https://www.certificationkits.com/ccna-videos/"><span class="">CCNA Videos</span></a></li><li id="menu-item-777" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-777"><a href="https://www.certificationkits.com/cisco-certification/ccna-articles/"><span class="">CCNA Topic Articles</span></a></li><li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310"><a href="https://www.certificationkits.com/cisco-ccna-certification-exam-center/"><span class="">CCNA Task Articles</span></a></li><li id="menu-item-778" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-778"><a href="https://www.certificationkits.com/cisco-certification/ccna-labs/cisco-ccna-lab-scenarios/"><span class="">CCNA Labs</span></a></li><li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-311"><a href="https://www.certificationkits.com/free-ccna-tools/"><span class="">CCNA Free Applications</span></a></li></ul></li><li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-319 fusion-dropdown-submenu"><a href="https://www.certificationkits.com/ccna-security/" aria-haspopup="true"><span class="">CCNA Security Study Center</span></a><ul class="sub-menu"><li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a href="https://www.certificationkits.com/cisco-certification/ccna-security-certification-topics/"><span class="">Security Articles</span></a></li></ul></li><li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-320 fusion-dropdown-submenu"><a href="https://www.certificationkits.com/ccna-voice/" aria-haspopup="true"><span class="">CCNA Voice Study Center</span></a><ul class="sub-menu"><li id="menu-item-782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-782"><a href="https://www.certificationkits.com/cisco-certification/ccna-voice-certification-topics-a-labs/"><span class="">Articles &amp; Labs</span></a></li></ul></li><li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-322 fusion-dropdown-submenu"><a href="https://www.certificationkits.com/ccnp-exam-center/" aria-haspopup="true"><span class="">CCNP Study Center</span></a><ul class="sub-menu"><li id="menu-item-783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-783"><a href="https://www.certificationkits.com/cisco-certification/cisco-ccnp-route-642-902-exam-study-guide/"><span class="">ROUTE Study Guide</span></a></li><li id="menu-item-784" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-784"><a href="https://www.certificationkits.com/cisco-certification/cisco-ccnp-switch-642-813-exam-study-guide/"><span class="">SWITCH Study Guide</span></a></li><li id="menu-item-785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-785"><a href="https://www.certificationkits.com/cisco-certification/cisco-ccnp-tshoot-642-832-exam-study-center/"><span class="">TSHOOT Study Guide</span></a></li></ul></li><li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-327 fusion-dropdown-submenu"><a href="https://www.certificationkits.com/cisco-ccie-certification-exam-center/" aria-haspopup="true"><span class="">CCIE Study Center</span></a><ul class="sub-menu"><li id="menu-item-328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-328"><a href="https://www.certificationkits.com/ccie-update/"><span class="">CCIE Exam Updates</span></a></li><li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://www.certificationkits.com/history-of-ccie-certification/"><span class="">History of CCIE</span></a></li><li id="menu-item-330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-330"><a href="https://www.certificationkits.com/how-to-become-a-cisco-ccie/"><span class="">Become a Cisco CCIE – Part 1</span></a></li><li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="https://www.certificationkits.com/how-to-become-a-cisco-ccie-part-2/"><span class="">Become a Cisco CCIE – Part 2</span></a></li><li id="menu-item-333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-333"><a href="http://shop.certificationkits.com/ccie-lab-kits/"><span class="">CCIE Lab Kits</span></a></li></ul></li></ul></li><li class="fusion-custom-menu-item fusion-main-menu-search fusion-last-menu-item"><a class="fusion-main-menu-icon"></a><div class="fusion-custom-menu-item-contents" style="display: none;"><form role="search" class="searchform" method="get" action="https://www.certificationkits.com/">
+	<div class="search-table">
+		<div class="search-field">
+			<input type="text" value="" name="s" class="s" placeholder="Search ...">
+		</div>
+		<div class="search-button">
+			<input type="submit" class="searchsubmit" value="">
+		</div>
+	</div>
+</form>
+</div></li></ul></nav><nav class="fusion-main-menu fusion-sticky-menu"><ul id="menu-main-menu-1" class="fusion-menu"><li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-9"><a href="https://www.certificationkits.com/"><span class="menu-text">Home</span></a></li><li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="https://www.certificationkits.com/about/"><span class="menu-text">About Us</span></a></li><li id="menu-item-831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-831"><a href="https://shop.certificationkits.com/contact-us/"><span class="menu-text">Contact Us</span></a></li><li id="menu-item-828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a href="https://www.certificationkits.com/blog/"><span class="menu-text">Blog</span></a></li><li id="menu-item-271" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-271"><a title="Shop" href="http://shop.certificationkits.com/"><span class="menu-text">Shop</span></a></li><li class="fusion-custom-menu-item fusion-main-menu-search fusion-last-menu-item"><a class="fusion-main-menu-icon"></a><div class="fusion-custom-menu-item-contents" style="display: none;"><form role="search" class="searchform" method="get" action="https://www.certificationkits.com/">
+	<div class="search-table">
+		<div class="search-field">
+			<input type="text" value="" name="s" class="s" placeholder="Search ...">
+		</div>
+		<div class="search-button">
+			<input type="submit" class="searchsubmit" value="">
+		</div>
+	</div>
+</form>
+</div></li></ul></nav>
+
+<nav class="fusion-mobile-nav-holder" style="display: none;"><ul id="menu-main-nav-menu" class="fusion-menu"><li id="mobile-menu-item-801" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="http://shop.certificationkits.com/lab-certification-kits/"><span class="menu-text">Lab Certification Kits</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-796" class="fusion-mobile-nav-item" style=""><a href="http://shop.certificationkits.com/ccna-lab-kits/"><span class="">CCNA Lab Kits</span></a></li><li id="mobile-menu-item-797" class="fusion-mobile-nav-item" style=""><a href="http://shop.certificationkits.com/ccna-security-kits/"><span class="">CCNA Security Kits</span></a></li><li id="mobile-menu-item-798" class="fusion-mobile-nav-item" style=""><a href="http://shop.certificationkits.com/ccna-voice-kits/"><span class="">CCNA Voice Kits</span></a></li><li id="mobile-menu-item-799" class="fusion-mobile-nav-item" style=""><a href="http://shop.certificationkits.com/ccnp-lab-kits/"><span class="">CCNP Lab Kits</span></a></li><li id="mobile-menu-item-800" class="fusion-mobile-nav-item" style=""><a href="http://shop.certificationkits.com/ccie-lab-kits/"><span class="">CCIE Lab Kits</span></a></li></ul></li><li id="mobile-menu-item-20" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a title="Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/"><span class="menu-text">Lab Suggestions</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-21" class="fusion-mobile-nav-item" style=""><a title="Cisco CCNA Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/cisco-lab-suggestions/"><span class="">CCNA</span></a></li><li id="mobile-menu-item-23" class="fusion-mobile-nav-item" style=""><a title="CCNA Security Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/how-to-ccna-security-lab/"><span class="">CCNA Security</span></a></li><li id="mobile-menu-item-273" class="fusion-mobile-nav-item" style=""><a title="How to Build a CCNA Voice 640-461 Lab" href="https://www.certificationkits.com/lab-suggestions/ccna-voice-lab/"><span class="">CCNA Voice</span></a></li><li id="mobile-menu-item-274" class="fusion-mobile-nav-item" style=""><a title="CCNP Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/ccnp-lab-suggestions/"><span class="">CCNP</span></a></li><li id="mobile-menu-item-275" class="fusion-mobile-nav-item" style=""><a title="Cisco CCIE Lab Suggestions" href="https://www.certificationkits.com/lab-suggestions/ccie-lab-suggestions/"><span class="">CCIE</span></a></li></ul></li><li id="mobile-menu-item-834" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="https://www.certificationkits.com/cisco-certification/"><span class="menu-text">Cisco Certification</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-305" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="https://www.certificationkits.com/ccna-study-center/"><span class="">CCNA Study Center</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-306" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/ccna/"><span class="">CCNA Overview</span></a></li><li id="mobile-menu-item-308" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/getting-started-ccna-lab/"><span class="">Getting Started</span></a></li><li id="mobile-menu-item-836" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/ccna-certification-study-topics/"><span class="">CCNA v2.0 Exam Center</span></a></li><li id="mobile-menu-item-776" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/cisco-ccna-640-802-exam-certification-guide/"><span class="">CCNA Course</span></a></li><li id="mobile-menu-item-309" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/ccna-videos/"><span class="">CCNA Videos</span></a></li><li id="mobile-menu-item-777" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/ccna-articles/"><span class="">CCNA Topic Articles</span></a></li><li id="mobile-menu-item-310" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-ccna-certification-exam-center/"><span class="">CCNA Task Articles</span></a></li><li id="mobile-menu-item-778" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/ccna-labs/cisco-ccna-lab-scenarios/"><span class="">CCNA Labs</span></a></li><li id="mobile-menu-item-311" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/free-ccna-tools/"><span class="">CCNA Free Applications</span></a></li></ul></li><li id="mobile-menu-item-319" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="https://www.certificationkits.com/ccna-security/"><span class="">CCNA Security Study Center</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-780" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/ccna-security-certification-topics/"><span class="">Security Articles</span></a></li></ul></li><li id="mobile-menu-item-320" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="https://www.certificationkits.com/ccna-voice/"><span class="">CCNA Voice Study Center</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-782" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/ccna-voice-certification-topics-a-labs/"><span class="">Articles &amp; Labs</span></a></li></ul></li><li id="mobile-menu-item-322" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="https://www.certificationkits.com/ccnp-exam-center/"><span class="">CCNP Study Center</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-783" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/cisco-ccnp-route-642-902-exam-study-guide/"><span class="">ROUTE Study Guide</span></a></li><li id="mobile-menu-item-784" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/cisco-ccnp-switch-642-813-exam-study-guide/"><span class="">SWITCH Study Guide</span></a></li><li id="mobile-menu-item-785" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/cisco-certification/cisco-ccnp-tshoot-642-832-exam-study-center/"><span class="">TSHOOT Study Guide</span></a></li></ul></li><li id="mobile-menu-item-327" class="fusion-mobile-nav-item" style=""><span href="#" aria-haspopup="true" class="fusion-open-submenu"></span><a href="https://www.certificationkits.com/cisco-ccie-certification-exam-center/"><span class="">CCIE Study Center</span></a><ul class="sub-menu" style="display: none;"><li id="mobile-menu-item-328" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/ccie-update/"><span class="">CCIE Exam Updates</span></a></li><li id="mobile-menu-item-329" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/history-of-ccie-certification/"><span class="">History of CCIE</span></a></li><li id="mobile-menu-item-330" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/how-to-become-a-cisco-ccie/"><span class="">Become a Cisco CCIE – Part 1</span></a></li><li id="mobile-menu-item-331" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/how-to-become-a-cisco-ccie-part-2/"><span class="">Become a Cisco CCIE – Part 2</span></a></li><li id="mobile-menu-item-333" class="fusion-mobile-nav-item" style=""><a href="http://shop.certificationkits.com/ccie-lab-kits/"><span class="">CCIE Lab Kits</span></a></li></ul></li></ul></li></ul></nav>
+
+	<nav class="fusion-mobile-nav-holder fusion-mobile-sticky-nav-holder" style="display: none;"><ul id="menu-main-menu-1" class="fusion-menu"><li id="mobile-menu-item-9" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/"><span class="menu-text">Home</span></a></li><li id="mobile-menu-item-10" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/about/"><span class="menu-text">About Us</span></a></li><li id="mobile-menu-item-831" class="fusion-mobile-nav-item" style=""><a href="https://shop.certificationkits.com/contact-us/"><span class="menu-text">Contact Us</span></a></li><li id="mobile-menu-item-828" class="fusion-mobile-nav-item" style=""><a href="https://www.certificationkits.com/blog/"><span class="menu-text">Blog</span></a></li><li id="mobile-menu-item-271" class="fusion-mobile-nav-item" style=""><a title="Shop" href="http://shop.certificationkits.com/"><span class="menu-text">Shop</span></a></li></ul></nav>
+																</div>
+	</div>
+</div> <!-- end fusion sticky header wrapper -->
+				</div>
+				<div class="fusion-clearfix"></div>
+			</header>
+					
+		<div id="sliders-container">
+					</div>
+				
+					<div class="fusion-page-title-bar fusion-page-title-bar-none fusion-page-title-bar-left">
+	<div class="fusion-page-title-row">
+		<div class="fusion-page-title-wrapper">
+			<div class="fusion-page-title-captions">
+
+																			<h1 data-fontsize="18" data-lineheight="25">Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs</h1>
+
+									
+				
+			</div>
+
+										
+		</div>
+	</div>
+</div>
+		
+		
+		
+						<div id="main" class="clearfix " style="">
+			<div class="fusion-row" style="">
+<div id="content" style="float: left;">
+			<div id="post-443" class="post-443 page type-page status-publish hentry">
+													
+			<div class="post-content">
+				<p>&nbsp;</p>
+<p class="Body">The best way to demonstrate subnetting method is by using an example. For example we are given a network address 192.168.116.0 with the default subnet mask of 255.255.255.0. The requirement is to perform subnetting such that we create as many subnets as we can with 30 hosts in each subnet.</p>
+<p class="Body"><span>Our First step will be to determine how many bits do we need to borrow from the host portion such that the requirement of minimum 30 hosts per subnet is fulfilled. Using the formula below</span></p>
+<p class="Body"><span>2<sup>n </sup>-2,</span><span>&nbsp;</span></p>
+<p class="Body"><span>Where the exponent n is equal to the number of bits left after subnet bits are borrowed.</span></p>
+<p class="Body"><span>we can calculate how many bits will be required so that each subnet has 30 host addresses. </span><span>2<sup>5 </sup>-2 =30, </span><span>so 5 bits atleast must be available for host addressing and the remaining can be borrowed to create subnet addresses. The -2 in the formula accounts for two addresses the subnetwork address and the broadcast address which cannot be assigned to hosts.</span></p>
+<p class="Body"><span>The network 192.168.116.0/24 has 8 bits for host portion and we will reserve 5 bits for the new host portion, the 3 bits remaining can now be used for creating subnets. To determine how many subnets we can</span></p>
+<p class="Body"><span>create, use the following formula:</span></p>
+<p class="Body"><span>2<sup>n</sup></span><span> = number of subnets</span></p>
+<p class="Body"><span>where the exponent n is bits borrowed from the host portion.</span></p>
+<p class="Body"><span>Thus in this case we can create </span><span>2<sup>3 </sup>=8 </span><span>subnets</span></p>
+<p class="Body"><span>Our second step will be to calculate the new subnet mask, our previous subnet mask was 255.255.255.0 or 11111111.11111111.11111111.00000000 in binary. Since we have borrowed 3 bits from the host portion our new subnet mask will be 11111111.11111111.11111111.<strong>111</strong>00000 which is 255.255.255.224 when converted to decimal notation.</span></p>
+<p class="Body"><span>We have discussed in detail the conversion process of binary to decimal and vice versa. When performing IP subnetting we will refer to the picture shown below which is very handy in this process.</span></p>
+<p class="Body"><img src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/image46.png"></p>
+<p class="Body"><span>So our original subnet mask was 255.255.255.0 and we allocated 3 bits from the host portion which allowed us to have 8 subnets and 30 hosts within each subnet. We can quickly convert 255.255.255.0 to binary by looking at the table above. An octet which is 255 in decimal will be 11111111 in binary so 255.255.255.0 will be 11111111. 11111111. 11111111.00000000. We will set the first 3 bits of the last octet to 1 and last octet will now be 11100000 which from the table above will be 224 in decimal. So our new subnet mask is 255.255.255.224</span></p>
+<p class="Body"><span>Our third step will be to determine the subnet multiplier which is fairly simple. All we have to do is subtract the last nonzero octet of the subnet mask from 256. So in this case our subnet multiplier will be 256-224 =32. We will use the subnet multiplier in the next step to list the subnets.</span></p>
+<p class="Body"><span>Our final step will be to list the subnet address, host range and the broadcast address. The first subnet address will be 192.168.116.0/27 and the following subnets will be with increments of 32, the subnet multiplier we calculated in the previous step.</span></p>
+<p class="Body"><span>Shown in the table below are the subnet addresses, their respective host ranges and the broadcast addresses.</span></p>
+<table class="MsoNormalTable" cellspacing="0" cellpadding="0" border="1">
+<tbody>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>Subnet Address</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>Host</span><span> Range</span><span></span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>Broadcast Address</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.0/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.1 -192.168.116.30</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.31</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.32/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.33 -192.168.116.62</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.63</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.64/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.65 -192.168.116.94</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.95</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.96/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.97 – 192.168.116.126</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.127</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.128/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.129 – 192.168.116.158</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.159</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.160/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.161 – 192.168.116.190</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.191</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.192/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.193 – 192.168.116.222</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.223</span></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="197">
+<p class="Body"><span>192.168.116.224/27</span></p>
+</td>
+<td valign="top" width="206">
+<p class="Body"><span>192.168.116.225 – 192.168.116.254</span></p>
+</td>
+<td valign="top" width="187">
+<p class="Body"><span>192.168.116.255</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="Body">As shown in the table, once we have listed the subnet addresses, calculating the host range and broadcast address is relatively simple. The broadcast address will be the last address of the subnet and one less the preceding subnet address. For example for the subnet 192.168.116.0/27 the broadcast address will be 192.168.1.31 which is last address of this subnet and in binary it will be all 1s in the host portion, this address is preceded by the next subnet address.</p>
+<p class="Body"><span>The host range will start from the next address after the subnet address for example for the subnet 192.168.116.32/27 the host range will start at 192.168.116.33 and end at one less the broadcast address which will be 192.168.116.62 since the broadcast address is 192.168.1.63. The host address must exactly be 30 in number since we have reserved 5 bits for the host portion.</span></p>
+<p class="Body"><span>The methods shown above to calculate the range of valid host IP addresses and the broadcast address are very easy and quick. We will also learn another way to perform these calculations.</span></p>
+<p class="Body"><span>To calculate the broadcast address of a subnet change all the host bits values in the subnet address to binary 1s. For example if we need to find the broadcast address of the subnet 192.168.116.32/27 we will first list the subnet address in binary, (we have previously discuses the mathematical conversion process in a previous article). So 192.168.116.0/27 will result in <strong>11000000.10101000.01110100.001</strong>00000. Then we will change all host bits values to binary 1s which will be <strong>11000000.10101000.01110100.001</strong>11111. So now we have the broadcast address in binary. Converting this to decimal will result in 192.168.116.63.</span></p>
+<p class="Body"><span>We can also calculate a range of valid host IP addresses in a subnet using the binary method. For example if need to calculate the range of host addresses in the subnet 192.168.116.32/27 we will first find the first usable host IP address by changing the right-most host bit to 1 of the subnet address . Our subnet address in binary is <strong>11000000.10101000.01110100.001</strong>00000 and when we change the right-most host bit to 1 it will be <strong>11000000.10101000.01110100.001</strong>00001 which is 192.168.116.33, this is our first usable host IP address of the subnet. Now we will find the last usable host IP address of the subnet by changing all host bits in the subnet address to 1 except for the right-most host bit which will be <strong>11000000.10101000.01110100.001</strong>11110, converting this to decimal will result in 192.168.116.62. So now we have the valid host IP address range for the subnet 192.168.116.32/27 which is from 192.168.116.33 to 192.168.116.62. It can also be confirmed from the table above.</span></p>
+<p class="Body"><span>This brings us to the end of this article in which we covered basic subnetting techniques. There are several techniques and each person has his favorite. The technique demonstrated in the article is simple and quick technique of performing subnetting.</span></p>
+<p class="Body"><span>Out first octet 11000000 can be converted to decimal by picking the bits which are 1 and adding the corresponding decmial values shown in the table above. So 11000000 will be 128 + 64 = 192.</span></p>
+<p class="Body"><span>Similarly the second octet 10101000 will be 128 + 32 + 8 = 168, third octet 01110100 will be 64 + 32 +16 +4 = 116 and the finally the fourth octet 11010010 will be 128 + 64 + 16 + 2 = 210.</span></p>
+<p class="Body"><span>This results in the IP address 192.168.116.210.</span></p>
+<p class="Body"><span>This brings us to the end of this article in which we learn the architecture of IP addresses and also explained the purpose of a subnet mask. We also covered a very imporant tutuorial on binary to decimal conversion and vice versa. It is very important to have firm concepts as these are the base for the entire upcoming CCNA lessons.</span></p>
+							</div>
+																					</div>
+		</div>
+<div id="sidebar" class="sidebar fusion-widget-area fusion-content-widget-area" style="float: right;">
+						
+			<div id="search-3" class="widget widget_search"><form role="search" class="searchform" method="get" action="https://www.certificationkits.com/">
+	<div class="search-table">
+		<div class="search-field">
+			<input type="text" value="" name="s" class="s" placeholder="Search ...">
+		</div>
+		<div class="search-button">
+			<input type="submit" class="searchsubmit" value="">
+		</div>
+	</div>
+</form>
+</div><div id="text-3" class="widget widget_text">			<div class="textwidget"><div style="text-align:center;">
+            <a href="http://shop.certificationkits.com/cisco-ccna-200-120-standard-kit/" target="_blank">
+                <img src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/special-3020-2.jpg">
+            </a>
+        </div>
+        <div style="text-align:center;">
+            <a href="http://shop.certificationkits.com/cisco-ccna-200-125-standard-kit/" target="_blank">
+                Cisco CCNA 200-125<br>Standard Kit
+            </a>
+        </div>
+        <div style="text-align:center;margin-bottom:20px;">
+            <span style="font-weight:bold; color:blue;">$499.99</span>
+        </div>
+
+
+        <div style="text-align:center;">
+            <a href="http://shop.certificationkits.com/cisco-ccna-200-120-premium-kit/" target="_blank">
+                <img src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/special-3030-2.jpg">
+            </a>
+        </div>
+        <div style="text-align:center;">
+            <a href="http://shop.certificationkits.com/cisco-ccna-200-125-premium-kit/" target="_blank">
+                Cisco CCNA 200-125<br>Premium Kit
+            </a>
+        </div>
+        <div style="text-align:center;margin-bottom:20px;">
+            <span style="font-weight:bold; color:blue;">709.99</span>
+        </div></div>
+		</div>	</div>
+
+				</div>  <!-- fusion-row -->
+			</div>  <!-- #main -->
+			
+			
+			
+			
+										
+				<div class="fusion-footer">
+
+																
+						<footer class="fusion-footer-widget-area fusion-widget-area">
+							<div class="fusion-row">
+								<div class="fusion-columns fusion-columns-4 fusion-widget-area">
+									
+																																							<div class="fusion-column col-lg-3 col-md-3 col-sm-3">
+												<div id="nav_menu-2" class="fusion-footer-widget-column widget widget_nav_menu"><div class="menu-footer-widget-menu-container"><ul id="menu-footer-widget-menu" class="menu"><li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286"><a title="Shop CertificationKits" href="http://shop.certificationkits.com/">Shop CertificationKits</a></li>
+<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="https://www.certificationkits.com/why-certification-kits/">Why CertificationKits?</a></li>
+<li id="menu-item-278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-278"><a title="Cisco Resources" href="https://www.certificationkits.com/cisco-resources/">Cisco Resources</a></li>
+<li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277"><a title="Testimonials" href="https://www.certificationkits.com/ccna-testimonials/">Wall of Fame</a></li>
+<li id="menu-item-811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-811"><a href="https://www.certificationkits.com/blog/">Blog</a></li>
+</ul></div><div style="clear:both;"></div></div>																																				</div>
+																																								<div class="fusion-column col-lg-3 col-md-3 col-sm-3">
+												<div id="nav_menu-4" class="fusion-footer-widget-column widget widget_nav_menu"><div class="menu-footer-widget-menu-2-container"><ul id="menu-footer-widget-menu-2" class="menu"><li id="menu-item-292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292"><a href="https://www.certificationkits.com/extended-warranties/">Extended Warranties</a></li>
+<li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a href="https://www.certificationkits.com/trade-up-program/">Trade-up Program</a></li>
+<li id="menu-item-289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-289"><a href="https://www.certificationkits.com/returns-exchanges/">Returns &amp; Exchanges</a></li>
+<li id="menu-item-290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290"><a href="https://www.certificationkits.com/shipping-information/">Shipping Information</a></li>
+<li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a href="https://www.certificationkits.com/terms-conditions/">Terms &amp; Conditions</a></li>
+<li id="menu-item-298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298"><a href="https://www.certificationkits.com/privacy-security/">Privacy &amp; Security</a></li>
+</ul></div><div style="clear:both;"></div></div>																																				</div>
+																																								<div class="fusion-column col-lg-3 col-md-3 col-sm-3">
+												<div id="text-2" class="fusion-footer-widget-column widget widget_text">			<div class="textwidget">CertificationKits is not affiliated or endorsed in any way by Cisco Systems Inc. Cisco, CCNA, CCENT, CCNP, CCSP, CCVP, CCIE are trademarks of Cisco Systems Inc.
+<br>Visit Cisco Systems Inc. at: www.cisco.com.</div>
+		<div style="clear:both;"></div></div>																																				</div>
+																																								<div class="fusion-column fusion-column-last col-lg-3 col-md-3 col-sm-3">
+												<div id="social_links-widget-2" class="fusion-footer-widget-column widget social_links"><h4 class="widget-title" data-fontsize="14" data-lineheight="14">Connect</h4>
+		<div class="fusion-social-networks">
+
+			<div class="fusion-social-networks-wrapper">
+								
+																										<a class="fusion-social-network-icon fusion-tooltip fusion-facebook fusion-icon-facebook" href="https://www.facebook.com/CertificationKits" data-placement="top" data-title="Facebook" data-toggle="tooltip" data-original-title="Facebook" title="" target="_self" style="font-size:16px;color:#bebdbd;"></a>
+					
+										
+																										<a class="fusion-social-network-icon fusion-tooltip fusion-twitter fusion-icon-twitter" href="http://twitter.com/CiscoKits" data-placement="top" data-title="Twitter" data-toggle="tooltip" data-original-title="Twitter" title="" target="_self" style="font-size:16px;color:#bebdbd;"></a>
+					
+										
+																										<a class="fusion-social-network-icon fusion-tooltip fusion-youtube fusion-icon-youtube" href="http://www.youtube.com/CiscoKits" data-placement="top" data-title="Youtube" data-toggle="tooltip" data-original-title="Youtube" title="" target="_self" style="font-size:16px;color:#bebdbd;"></a>
+					
+										
+																										<a class="fusion-social-network-icon fusion-tooltip fusion-googleplus fusion-icon-googleplus" href="https://plus.google.com/+Certificationkits" data-placement="top" data-title="Google+" data-toggle="tooltip" data-original-title="Google+" title="" target="_self" style="font-size:16px;color:#bebdbd;"></a>
+					
+										
+				
+			</div>
+		</div>
+
+		<div style="clear:both;"></div></div><div id="contact_info-widget-2" class="fusion-footer-widget-column widget contact_info">
+		<div class="contact-info-container">
+			
+			
+			
+			
+			
+					</div>
+		<div style="clear:both;"></div></div>																																				</div>
+																																																									
+									<div class="fusion-clearfix"></div>
+								</div> <!-- fusion-columns -->
+							</div> <!-- fusion-row -->
+						</footer> <!-- fusion-footer-widget-area -->
+					
+																
+						<footer id="footer" class="fusion-footer-copyright-area">
+							<div class="fusion-row">
+								<div class="fusion-copyright-content">
+
+											<div class="fusion-copyright-notice">
+			<div>Copyright 2017 CertificationKits.com | All Rights Reserved</div>
+		</div>
+					<div class="fusion-social-links-footer">
+				<div class="fusion-social-networks"><div class="fusion-social-networks-wrapper"><a class="fusion-social-network-icon fusion-tooltip fusion-facebook fusion-icon-facebook" style="color:#46494a;" href="https://www.facebook.com/CertificationKits" target="_blank" rel="noopener noreferrer" data-placement="top" data-title="Facebook" data-toggle="tooltip" title="" data-original-title="Facebook"><span class="screen-reader-text">Facebook</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-twitter fusion-icon-twitter" style="color:#46494a;" href="http://twitter.com/CiscoKits" target="_blank" rel="noopener noreferrer" data-placement="top" data-title="Twitter" data-toggle="tooltip" title="" data-original-title="Twitter"><span class="screen-reader-text">Twitter</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-youtube fusion-icon-youtube" style="color:#46494a;" href="http://www.youtube.com/CiscoKits" target="_blank" rel="noopener noreferrer" data-placement="top" data-title="Youtube" data-toggle="tooltip" title="" data-original-title="Youtube"><span class="screen-reader-text">Youtube</span></a><a class="fusion-social-network-icon fusion-tooltip fusion-googleplus fusion-icon-googleplus" style="color:#46494a;" href="https://plus.google.com/+Certificationkits" target="_blank" rel="noopener noreferrer" data-placement="top" data-title="Google+" data-toggle="tooltip" title="" data-original-title="Google+"><span class="screen-reader-text">Google+</span></a></div></div>			</div>
+		
+								</div> <!-- fusion-fusion-copyright-content -->
+							</div> <!-- fusion-row -->
+						</footer> <!-- #footer -->
+									</div> <!-- fusion-footer -->
+					</div> <!-- wrapper -->
+
+				
+		<a class="fusion-one-page-text-link fusion-page-load-link"></a>
+
+		<!-- W3TC-include-js-head -->
+
+		
+<!-- Google Tag Manager (noscript) -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-NJRC53"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<!-- End Google Tag Manager (noscript) --><script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/comment-reply.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var toTopscreenReaderText = {"label":"Go to Top"};
+var avadaVars = {"admin_ajax":"https:\/\/www.certificationkits.com\/wp-admin\/admin-ajax.php","admin_ajax_nonce":"c57465f0da","protocol":"1","theme_url":"https:\/\/www.certificationkits.com\/wp-content\/themes\/Avada","dropdown_goto":"Go to...","mobile_nav_cart":"Shopping Cart","page_smoothHeight":"false","flex_smoothHeight":"false","language_flag":"","infinite_blog_finished_msg":"<em>All posts displayed.<\/em>","infinite_finished_msg":"<em>All items displayed.<\/em>","infinite_blog_text":"<em>Loading the next set of posts...<\/em>","portfolio_loading_text":"<em>Loading Portfolio Items...<\/em>","faqs_loading_text":"<em>Loading FAQ Items...<\/em>","order_actions":"Details","avada_rev_styles":"0","avada_styles_dropdowns":"0","blog_grid_column_spacing":"40","blog_pagination_type":"Pagination","carousel_speed":"2500","counter_box_speed":"1000","content_break_point":"800","disable_mobile_animate_css":"1","disable_mobile_image_hovers":"0","portfolio_pagination_type":"Pagination","form_bg_color":"#ffffff","header_transparency":"0","header_padding_bottom":"0px","header_padding_top":"0px","header_position":"Top","header_sticky":"1","header_sticky_tablet":"0","header_sticky_mobile":"0","header_sticky_type2_layout":"menu_only","sticky_header_shrinkage":"1","is_responsive":"1","is_ssl":"true","isotope_type":"masonry","layout_mode":"wide","lightbox_animation_speed":"Normal","lightbox_arrows":"1","lightbox_autoplay":"0","lightbox_behavior":"all","lightbox_desc":"1","lightbox_deeplinking":"1","lightbox_gallery":"1","lightbox_opacity":"0.9","lightbox_path":"vertical","lightbox_post_images":"1","lightbox_skin":"metro-white","lightbox_slideshow_speed":"5000","lightbox_social":"1","lightbox_title":"1","lightbox_video_height":"720","lightbox_video_width":"1280","logo_alignment":"Left","logo_margin_bottom":"0px","logo_margin_top":"31px","megamenu_max_width":"1100","mobile_menu_design":"modern","nav_height":"40","nav_highlight_border":"3","page_title_fading":"0","pagination_video_slide":"0","related_posts_speed":"2500","submenu_slideout":"1","side_header_break_point":"800","sidenav_behavior":"Hover","site_width":"1100px","slider_position":"below","slideshow_autoplay":"1","slideshow_speed":"7000","smooth_scrolling":"1","status_lightbox":"0","status_totop_mobile":"1","status_vimeo":"0","status_yt":"0","testimonials_speed":"4000","tfes_animation":"sides","tfes_autoplay":"1","tfes_interval":"3000","tfes_speed":"800","tfes_width":"150","title_style_type":"double","title_margin_top":"0px","title_margin_bottom":"31px","typography_responsive":"0","typography_sensitivity":"0.6","typography_factor":"1.5","woocommerce_shop_page_columns":"","woocommerce_checkout_error":"Not all fields have been filled in correctly.","side_header_width":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/main.min.js.download" async=""></script> 
+<!--[if IE 9]>
+<script type='text/javascript' src='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/assets/js/avada-ie9.js?ver=5.0.6'></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://8206-presscdn-0-35-pagely.netdna-ssl.com/wp-content/themes/Avada/assets/js/respond.js?ver=5.0.6'></script>
+<![endif]-->
+<script type="text/javascript" src="./Calculate Hosts in a Subnet, networks in a subnet, &amp; range of IPs – CertificationKits.com_files/wp-embed.min.js.download"></script>
+
+			
+
+<div class="to-top-container"><a href="https://www.certificationkits.com/cisco-certification/ccna-articles/cisco-ccna-network-layer-conceptslayer-3/calculate-hosts-in-a-subnet-networks-in-a-subnet-a-range-of-ips/#" id="toTop" style="display: inline;"><span id="toTopHover"></span><span class="screen-reader-text">Go to Top</span></a></div></body></html>
