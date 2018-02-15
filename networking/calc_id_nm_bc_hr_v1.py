@@ -1,7 +1,8 @@
-def hostips(netid,bcastip,firstip,lastip):
+def hostips(cidr,netid,bcastip,firstip,lastip):
 	for i in range(0,4):
 		firstip[i] = netid[i] 
 		lastip[i] = bcastip[i]
+	if (cidr >=24 & cidr < 32):
 		firstip[3] = firstip[3]+1
 		lastip[3] = lastip[3]-1
 	return firstip,lastip
@@ -18,7 +19,6 @@ def bcastparse(nmask,netid,bcastip):
 	for i in range(0,4):
 		imask[i] = ~nmask[i]&255
 		bcastip[i] = netid[i]^imask[i]
-	print(imask)
 	return bcastip
 
 def ipv4parse(ipraw,ipv4,nmask):
@@ -110,11 +110,9 @@ def main():
 	bcastip = [-1,-1,-1,-1]
 	firstip = [-1,-1,-1,-1]
 	lastip = [-1,-1,-1,-1]
-	#print(ipv4,end='')
-	#print(nmask)
+	cidr = ipv4[4]cd 
 	print ('Input an IP as follows 192.168.116.0/27')
 	ipraw = input('                                     IP: ')
-	#print (ipraw,' ',end='')
 	print('* * * * * * * * * * * * * * * * * * * * * * * * * *')
 	ipv4,nmask = ipv4parse(ipraw,ipv4,nmask)
 	netid = netidparse(ipv4,nmask,netid)
@@ -123,7 +121,7 @@ def main():
 	print('NET-MASK:',nmask[0],nmask[1],nmask[2],nmask[3])
 	print('  NET-ID:',netid)
 	print('BCAST-IP:',bcastip)
-	firstip, lastip = hostips(netid,bcastip,firstip,lastip)
+	firstip, lastip = hostips(cidr,netid,bcastip,firstip,lastip)
 	print ("HOST RANGE");
 	print (firstip,' - ', lastip)
 main()
