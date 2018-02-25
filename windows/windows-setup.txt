@@ -1,0 +1,8 @@
+Control Panel\System and Security\System
+
+Set path for system:
+
+C:\Python36\
+
+The above path is set with a custom nstall of python at C:\Python36\
+

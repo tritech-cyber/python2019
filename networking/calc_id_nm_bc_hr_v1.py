@@ -36,71 +36,21 @@ def ipv4parse(ipraw,ipv4,nmask):
 		cidr = ipv4[4]
 	print ("CIDR = ",cidr)
 	if(cidr == 32):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 255;
+		nmask = [255,255,255,255]
 	if(cidr == 31):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 254;
+		nmask = [255,255,255,254]
 	if(cidr == 30):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 252;
+		nmask = [255,255,255,253]
 	if(cidr == 29):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 248;
+		nmask = [255,255,255,253]
 	if(cidr == 28):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 240;
+		nmask = [255,255,255,253]
 	if(cidr == 27):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 224;
+		nmask = [255,255,255,253]
 	if(cidr == 26):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 192;
+		nmask = [255,255,255,253]
 	if(cidr == 25):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 128;
-	if(cidr == 24):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 255;nmask[3] = 0;
-	if(cidr == 23):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 254;nmask[3] = 0;
-	if(cidr == 22):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 252;nmask[3] = 0;
-	if(cidr == 21):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 248;nmask[3] = 0;
-	if(cidr == 20):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 240;nmask[3] = 0;
-	if(cidr == 19):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 224;nmask[3] = 0;
-	if(cidr == 18):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 192;nmask[3] = 0;
-	if(cidr == 17):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 128;nmask[3] = 0;
-	if(cidr == 16):
-		nmask[0] = 255; nmask[1] = 255;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 15):
-		nmask[0] = 255; nmask[1] = 254;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 14):
-		nmask[0] = 255; nmask[1] = 252;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 13):
-		nmask[0] = 255; nmask[1] = 248;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 12):
-		nmask[0] = 255; nmask[1] = 240;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 11):
-		nmask[0] = 255; nmask[1] = 224;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 10):
-		nmask[0] = 255; nmask[1] = 192;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 9):
-		nmask[0] = 255; nmask[1] = 128;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 8):
-		nmask[0] = 255; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 7):
-		nmask[0] = 254; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 6):
-		nmask[0] = 252; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 5):
-		nmask[0] = 248; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 4):
-		nmask[0] = 240; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 3):
-		nmask[0] = 224; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 2):
-		nmask[0] = 192; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 1):
-		nmask[0] = 128; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;
-	if(cidr == 0):
-		nmask[0] = 0; nmask[1] = 0;nmask[2] = 0;nmask[3] = 0;			
+		nmask = [255,255,255,253]			
 	return ipv4, nmask
 
 def main():
@@ -110,7 +60,7 @@ def main():
 	bcastip = [-1,-1,-1,-1]
 	firstip = [-1,-1,-1,-1]
 	lastip = [-1,-1,-1,-1]
-	cidr = ipv4[4]cd 
+	cidr = ipv4[4]
 	print ('Input an IP as follows 192.168.116.0/27')
 	ipraw = input('                                     IP: ')
 	print('* * * * * * * * * * * * * * * * * * * * * * * * * *')
@@ -126,6 +76,7 @@ def main():
 	print (firstip,' - ', lastip)
 main()
 
+# testing values
 #Subnet Address			Host Range		    				Broadcast Address
 #192.168.116.0/27		192.168.116.1 -192.168.116.30		192.168.116.31
 #192.168.116.32/27		192.168.116.33 -192.168.116.62		192.168.116.63
