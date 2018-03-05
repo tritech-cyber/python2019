@@ -17,9 +17,11 @@ def netidparse(ipv4,nmask,netid):
 
 def bcastparse(nmask,netid,bcastip):
 	imask = [-1,-1,-1,-1]
+	print("bcastparse",netid, nmask, bcastip)
 	for i in range(0,4):
 		imask[i] = ~nmask[i]&255
-		bcastip[i] = netid[i]^imask[i]
+		bcastip[i] = netid[i]|imask[i]
+	print("after calc",bcastip)
 	return bcastip
 
 def ipv4parse(ipraw,ipv4,nmask):
@@ -49,7 +51,7 @@ def ipv4parse(ipraw,ipv4,nmask):
 	if(cidr == 27):
 		nmask = [255,255,255,224]	
 	if(cidr == 26):
-		nmask = [255,255,255,196]
+		nmask = [255,255,255,192]
 	if(cidr == 25):
 		nmask = [255,255,255,128]
 	if(cidr == 24):
@@ -65,7 +67,7 @@ def ipv4parse(ipraw,ipv4,nmask):
 	if(cidr == 19):
 		nmask = [255,255,224,0]
 	if(cidr == 18):
-		nmask = [255,255,196,0]	
+		nmask = [255,255,192,0]	
 	if(cidr == 17):
 		nmask = [255,255,128,0]	
 	if(cidr == 16):
@@ -81,7 +83,7 @@ def ipv4parse(ipraw,ipv4,nmask):
 	if(cidr == 11):
 		nmask = [255,224,0,0]
 	if(cidr == 10):
-		nmask = [255,196,0,0]
+		nmask = [255,192,0,0]
 	if(cidr == 9):
 		nmask = [255,128,0,0]
 	if(cidr == 8):
@@ -97,7 +99,7 @@ def ipv4parse(ipraw,ipv4,nmask):
 	if(cidr == 3):
 		nmask = [224,0,0,0]	
 	if(cidr == 2):
-		nmask = [196,0,0,0]	
+		nmask = [192,0,0,0]	
 	if(cidr == 1):
 		nmask = [128,0,0,0]
 	if(cidr == 0):
