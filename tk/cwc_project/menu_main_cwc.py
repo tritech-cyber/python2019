@@ -19,8 +19,12 @@ b.pack()
 t1.pack()
 t2.pack()
 t3.pack()
-root.mainloop()
 
-"""
-This menu needs a lot of workself.
-"""
+def main():
+    root = tk.Tk()
+    root.mainloop()
+    app = MainManu(root)
+    root.mainloop()
+
+if __name__ == '__main__':
+    main()
