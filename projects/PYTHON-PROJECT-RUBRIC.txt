@@ -1,0 +1,18 @@
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* PYTHON GROUP PROJECT   (100 POINTS)                                      *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* _____ GRAPHICS MUST BE turtle (20)                                        *
+* _____ EACH PERSON IN THE GROUP NEEDS A SEPARATE FILE (20)                 *
+* _____ CODE MUST BE ORIGINAL (20)                                          *
+* _____ EACH INDIVIDUAL PERSONS CODE MUST BE PRESENTED(20)                  *
+* _____ EACH PERSON NEEDS TO EXPLAIN PART OF THEIR PYTHON TURTLE CODE (20)  *
+*                                                                           *
+*       CODE WILL BE COPIED TO 10.183.1.30                                  *
+*                                                                           *
+*       PYTHON USER INTERFACE (UI) CODE TO DISPLAY EACH                     *
+*       PERSONS CODE MAY BE MODIFIED FROM PROVIDED EXAMPLES                 *
+*       AT https://github.com/tritech-cyber/python OR OTHER                 *
+*       CODE COPIED FROM THE INTERNET.                                      *
+*       ALL OTHER CODE MUST BE ORIGINAL.                                    *
+*                                                                           *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
