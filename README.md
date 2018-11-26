@@ -1,4 +1,3 @@
-<pre>
 #Python Lists, Tuples, Dictionaries and Sets
 https://stackoverflow.com/questions/3489071/in-python-when-to-use-a-dictionary-list-or-set
 ###
@@ -19,7 +18,7 @@ When you want a mapping from keys to values, use a dict.
   {'John Smith' : '555-1212'}). Note the keys in a dict are unordered.
   (If you iterate through a dict (telephone book),
   the keys (names) may show up in any order).
-</pre>
+
 
 <pre>
 git commands
