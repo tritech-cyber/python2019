@@ -11,9 +11,6 @@ When you want to collect a mutable ordered list of elements, use a list. (For ex
 When you want a mapping from keys to values, use a dict. (For example, when you want a telephone book which maps names to phone numbers: {'John Smith' : '555-1212'}). Note the keys in a dict are unordered. (If you iterate through a dict (telephone book), the keys (names) may show up in any order).
 References:
 https://www.w3schools.com/python/python_sets.asp
-for x in alpha looks at all the elements in the
-set and assigns one at a time to the x variable.
-The following is an excellent resource.
 https://www.programiz.com/python-programming/set
 <pre>
 git commands
