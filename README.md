@@ -1,3 +1,38 @@
+python 2018-2019 -181202
+_____ vars.py
+_____ types1.py (numbers)
+_____ casting.py
+_____ strings.py 
+_____ operators.py
+_____ binarystring.py
+_____ dechexbin_loop.py
+_____ example-ord.py
+_____ list123.py
+_____ nato-tuple.py
+_____ dictionaries.py
+_____ sets_1.py, sets_2.py, sets_3.py & sets_4.py
+_____ if_and_or.py	
+_____ ifcondition.py
+		https://www.w3schools.com/python/python_strings.asp
+_____ while_break.py
+_____ for_loops.py
+
+MATH
+_____ convertkmmi.py	
+_____ find_factors.py	
+_____ math_outputs.txt	
+_____ multiplication.py	
+_____ quadratic.py
+
+
+for x in range(0,11):
+	print (x, x*x, x*x*x)
+
+for x in range(0,11):
+	print ('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
+
+
+
 Please read the Wiki. You need to be logged into to github.
 # **Python Lists, Tuples, Dictionaries and Sets **
 https://stackoverflow.com/questions/3489071/in-python-when-to-use-a-dictionary-list-or-set
