@@ -1,3 +1,4 @@
+<pre>
 python 2018-2019 -181202
 _____ vars.py
 _____ types1.py (numbers)
@@ -30,7 +31,7 @@ for x in range(0,11):
 
 for x in range(0,11):
 	print ('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
-
+</pre>
 
 
 Please read the Wiki. You need to be logged into to github.
